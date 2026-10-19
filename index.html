@@ -44,7 +44,7 @@
                                                                               
     <h1>무브미(MoveMe) 개인정보처리방침</h1>                                  
     <p class="meta"><strong>앱 이름:</strong> 무브미(MoveMe)</p>              
-    <p class="meta"><strong>시행일:</strong> 2026-07-24</p>                   
+    <p class="meta"><strong>시행일:</strong> 2026-07-24 · <strong>최종 개정:</strong> 2026-10-20 (v1.2.0)</p>                   
     <p class="meta"><strong>개발자/문의:</strong> Bohyeon Park / parkbh7963@gmail.com</p>                                                            
                                                                               
     <div class="summary">                                                     
@@ -67,47 +67,60 @@
     <h2>2. 기기 내 저장 정보</h2>                                             
     <ul>                                                                      
       <li>이용자의 아침 체크인 기록, 저장한 확언·요가 영상 목록, 온보딩 완료 여부, <strong>경험 수준 설정(초심자·중급자·숙련자, v1.1.0 추가)</strong> 등은 기기의 로컬 저장소(iOS <code>UserDefaults</code>)에 저장됩니다.</li>
+      <li><strong>v1.2.0부터</strong> 다음 정보도 함께 기기에 저장됩니다.
+      <ul>
+        <li><strong>확언 표시 이력</strong> — 같은 확언이 반복해서 나오지 않도록, 이미 보여드린 확언을 기록합니다.</li>
+        <li><strong>요가 완료 기록과 오요완 카드 정보</strong> — 그날 완료한 영상, 오요완 카드를 만든 시각과 그때의 연속 완료일. (카드 이미지 파일 자체는 저장하지 않고, 필요할 때 이 정보로 다시 그립니다.)</li>
+        <li><strong>업데이트 소식 확인 여부</strong> — 업데이트 후 소식 화면을 한 번만 보여드리기 위해, 마지막으로 확인한 앱 버전을 기록합니다.</li>
+      </ul>
       <li>이 정보는 <strong>외부로 전송되지 않으며</strong> 개발자를 포함한 제3자가 접근할 수 없습니다.</li>
       <li><strong>v1.1.0부터</strong> 앱의 <code>설정 &gt; 데이터 초기화</code>에서 위 정보를 한 번에 삭제할 수 있습니다.</li>                                           
     </ul>
+
+    <h2>3. 오요완 카드 이미지 공유 (v1.2.0 추가)</h2>
+  <ul>
+    <li>요가를 마치면 만들 수 있는 <strong>오요완 카드 이미지는 이용자 기기 안에서 만들어집니다.</strong></li>
+    <li>이미지는 이용자가 <strong>"공유" 버튼을 눌러 iOS 공유 화면에서 직접 고른 곳</strong>(메시지·SNS 앱, 사진 앨범 등)으로만 보내집니다.
+        무브미는 이미지를 따로 보관하거나 개발자·외부 서버로 전송하지 않습니다.</li>
+    <li>공유하는 동안 이미지가 기기의 임시 폴더에 잠시 저장될 수 있으며, 이 파일도 외부로 전송되지 않습니다.</li>
+    <li>"이미지 저장"으로 사진 앨범에 저장할 때는 <strong>사진 추가 권한</strong>을 요청합니다. 무브미는 사진 앨범의 사진을 읽지 않습니다.</li>
+    <li>카드에는 <strong>날짜, 연속 완료일, 완료한 영상의 종류, 체크인 때 고른 불편한 부위</strong>가 표시되며,
+        이름·사진 등 이용자를 식별하는 정보는 들어가지 않습니다. 공유하기 전에 카드 화면에서 내용을 확인할 수 있습니다.</li>
+    <li>카드의 QR 코드에는 <strong>무브미 App Store 페이지 주소만</strong> 담겨 있습니다.</li>
+    <li>공유한 이미지는 이용자가 보낸 서비스(SNS 등)의 정책에 따라 처리됩니다.</li>
+  </ul>
                                                                                   
-    <h2>3. 제3자 서비스 — 유튜브(YouTube)</h2>                               
-    <ul>                                                                      
-      <li>무브미는 요가 영상을 <strong>유튜브 공식 임베드 플레이어</strong>로 
-  재생합니다(영상을 내려받거나 재호스팅하지 않습니다).</li>                   
-      <li>영상을 재생하면 <strong>유튜브(Google LLC)</strong>가 자체 정책에   
-  따라 데이터를 처리할 수 있습니다.                                           
-          무브미는 개인정보 보호가 강화된(쿠키 최소화, <code>youtube-nocookie.com</code>) 방식으로 임베드하지만,                                          
-          유튜브 플레이어의 데이터 처리는 유튜브/Google의 정책이 적용됩니다.  
-        <ul>                                                                  
-          <li>Google 개인정보처리방침: <a href="https://policies.google.      
-  com/privacy">https://policies.google.com/privacy</a></li>                   
-          <li>YouTube 약관: <a href="https://www.youtube.                     
-  com/t/terms">https://www.youtube.com/t/terms</a></li>                       
-        </ul>                                                                 
-      </li>                                                                   
-      <li>영상 썸네일 이미지도 유튜브 도메인에서 불러옵니다.</li>             
-    </ul>                                                                     
+    <h2>4. 제3자 서비스 — 유튜브(YouTube)</h2>
+  <ul>
+    <li>무브미는 요가 영상을 <strong>유튜브 공식 임베드 플레이어</strong>로 재생합니다(영상을 내려받거나 재호스팅하지 않습니다).</li>
+    <li>영상을 재생하면 <strong>유튜브(Google LLC)</strong>가 자체 정책에 따라 데이터를 처리할 수 있습니다.
+        무브미는 개인정보 보호가 강화된(쿠키 최소화, <code>youtube-nocookie.com</code>) 방식으로 임베드하지만,
+        유튜브 플레이어의 데이터 처리는 유튜브/Google의 정책이 적용됩니다.
+      <ul>
+        <li>Google 개인정보처리방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+        <li>YouTube 약관: <a href="https://www.youtube.com/t/terms">https://www.youtube.com/t/terms</a></li>
+      </ul>
+    </li>
+    <li>영상 썸네일 이미지도 유튜브 도메인에서 불러옵니다. (오요완 카드에는 영상 썸네일을 넣지 않습니다.)</li>
+  </ul>                                                                     
                                                                               
-    <h2>4. 아동</h2>                                                          
-    <ul>                                                                      
-      <li>무브미는 아동을 포함해 어떤 이용자의 개인정보도 수집하지 않습니다.  
-  </li>                                                                       
-    </ul>
-                                                                                  
-    <h2>5. 데이터 보관·삭제</h2>                                             
-    <ul>                                                                      
-      <li>기기 내 저장 정보는 이용자가 앱을 삭제하면 완전히 삭제됩니다.       
-          별도의 계정·서버가 없어 개발자가 보관하는 이용자 데이터는 없습니다.
-  </li>                                                                       
-    </ul>                                                                     
-                                                                              
-    <h2>6. 변경</h2>                                                          
-    <ul>                                                                      
-      <li>본 방침은 개정될 수 있으며, 변경 시 본 페이지에 게시합니다.</li>    
-    </ul>                                                                     
-                                                                              
-    <h2>7. 문의</h2>                                                          
+    <h2>5. 아동</h2>
+  <ul>
+    <li>무브미는 아동을 포함해 어떤 이용자의 개인정보도 수집하지 않습니다.</li>
+  </ul>
+
+  <h2>6. 데이터 보관·삭제</h2>
+  <ul>
+    <li>기기 내 저장 정보는 이용자가 앱을 삭제하면 완전히 삭제됩니다.
+        별도의 계정·서버가 없어 개발자가 보관하는 이용자 데이터는 없습니다.</li>
+  </ul>
+
+  <h2>7. 변경</h2>
+  <ul>
+    <li>본 방침은 개정될 수 있으며, 변경 시 본 페이지에 게시합니다.</li>
+  </ul>
+
+  <h2>8. 문의</h2>                                                          
     <ul>                                                                      
       <li>parkbh7963@gmail.com</li>                                             
     </ul>                                                                     
